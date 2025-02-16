@@ -1,27 +1,37 @@
-# FreshPrintsAssignment
+# GitHub User Search - Fresh Prints Assignment By Kanishk Mogalraj  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.14.
+## 📌 Assignment Overview  
+- Developed a **Single Page Application (SPA)** using **Angular Framework**.  
+- Integrated **GitHub API** to fetch and display user profiles.  
+- Implemented **local storage** to maintain search history.  
+- Used **Signals** for efficient and reactive state management.  
+- Implemented **Routing** to navigate between **Home (Search) and History pages**.  
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Key Features  
 
-## Code scaffolding
+### 🏠 Home Page (Search Page)  
+- Users can **search GitHub users** by entering a username.  
+- Results are displayed in a **table below the search bar**.  
+- Used **Signals** to track and update search results in real-time.  
+- If a user searches for the **same username again**, it is **not duplicated** in history. Instead:  
+  - The existing entry is **moved to the top** (sorted).  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 📜 History Page  
+- Displays the **search history** stored in local storage.  
+- Used **Signals** to update history instantly when a new search is performed.  
+- Shows both **successful** and **unsuccessful** searches.  
+- Users can **clear specific search entries** to remove clutter.   
+---
 
-## Build
+## 🔧 Technical Implementation  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+✅ **Signals used for state management**, ensuring **real-time updates** without extra change detection.  
+✅ **Local Storage** used to store search history for persistence.  
+✅ **GitHub API Integration** to fetch user details dynamically.  
+✅ **Sorting Mechanism** implemented to move repeated searches to the top.  
+✅ **Angular Routing** added to switch between Home and History pages.  
+✅ **Unit Test Cases** written for core functionalities.  
+✅ **Optimized Performance** by preventing unnecessary API calls for duplicate searches.  
+✅ **Clean and modular code structure** following best practices.  
