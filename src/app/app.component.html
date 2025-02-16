@@ -1,0 +1,15 @@
+
+
+<section class="nav-section">
+  <nav>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      @for (tab of allTabs; track $index) {
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" [ngClass]="{'active': isActive($index)}" id="pills-home-tab" (click)="onTabChange(tab.name)" [routerLink]="tab.path" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">{{tab.name}}</button>
+        </li>
+      }
+    </ul>
+  </nav>
+</section>
+
+<router-outlet />

@@ -1,0 +1,75 @@
+:host {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.history-section {
+    width: 42em;
+    margin-top: 2em;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+
+
+    .title {
+        font-size: 1em;
+        font-weight: 500;
+        color: #d3d3d3;
+    }
+
+
+    .history-table {
+        width: inherit;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        display: flex;
+        justify-items: flex-start;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px 15px;
+
+        tbody, thead {
+            width: 100%;
+        }
+    
+        tr {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    
+        th, td {
+            font-size: 0.85em;
+            color: #d3d3d3;
+            font-weight: 500;
+            padding: 15px 10px;
+            text-align: center;
+        }
+    
+        .term {
+            font-size: 0.85em;
+            color: #c2c2c2;
+            font-weight: 400;
+        }
+    }
+
+    .no-history, .no-recent-data {
+        font-size: 0.95em;
+        font-weight: 500;
+        color: #d3d3d3;
+    }
+
+    .no-recent-data {
+        text-align: center;
+    }
+
+    .clear-history {
+        margin-bottom: 2em;
+    }
+}
+

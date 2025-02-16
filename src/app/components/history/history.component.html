@@ -1,0 +1,35 @@
+
+
+<section class="history-section">
+    <div class="title">Your Search History</div>
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th class="col">Search Term</th>
+              <th class="col">Search Results</th>
+            </tr>
+          </thead>
+          <tbody>
+            @if (data && data.list && data.list.length) {
+              @for (history of data.list; track $index)  {
+                <tr>
+                  <td class="col term">{{history.query}}</td>
+                  <td class="col">
+                    @if (history.data !== null) {
+                      <app-user-details [user]="history.data" />
+                    }@else {
+                      <div class="no-history">Search Result not found</div>
+                    }
+                  </td>
+                </tr>
+              }
+            } @else {
+              <tr>
+                <td class="no-recent-data" colspan="2">No Recent History</td>
+              </tr>
+            }
+          
+          </tbody>
+        </table>
+        <button type="button" class="btn btn-success clear-history" (click)="clearHistory()">Clear Search History</button>
+</section>

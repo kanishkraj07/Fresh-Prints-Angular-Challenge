@@ -1,0 +1,23 @@
+<table class="results-section">
+    <thead>
+        <tr class="data">
+            <th class="profile">User Image</th>
+            <th>GitHub User Name</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @if (user) {
+            <tr class="data">
+                <td class="user-image">
+                    <img [src]="user.avatar_url" class="img-thumbnail" alt="profile-image">
+                </td>
+                <td class="user-name">
+                    {{user.name ? user.name : 'No User Name'}}
+                </td>
+            </tr>
+        } @else {
+            <td>User not found.</td>
+        }
+    </tbody>
+</table>

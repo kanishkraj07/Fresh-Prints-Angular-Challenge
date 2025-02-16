@@ -1,0 +1,26 @@
+<section class="search-container">
+    <ng-container *ngTemplateOutlet="SEARCH_SECTION"></ng-container>
+    @if (isSearch && doneloading) {
+        <ng-container *ngTemplateOutlet="SEARCH_RESULTS_SECTION"></ng-container>
+    }
+</section>
+
+<ng-template #SEARCH_SECTION>
+   <div class="search-section">
+        <div class="title">{{TILTE}}</div>
+        <input type="text" id="search" placeholder="Enter Username" [formControl]="searchCtrl">
+        <button type="button" class="btn btn-success" (click)="search()">{{doneloading ? 'Search' : 'Searching...'}}</button>
+   </div>
+</ng-template>
+
+
+<ng-template #SEARCH_RESULTS_SECTION>
+    <div class="search-results">
+        <div class="results-title">Search Results</div>
+        @if (isUserFound) {
+            <app-user-details [user]="searchResult" />
+        } @else {
+            <div class="no-user">No User Found</div>
+        }
+    </div>
+</ng-template>
